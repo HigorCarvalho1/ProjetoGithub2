@@ -1,0 +1,315 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1..6rem;
+    padding: 7rem 16.0rem;
+    background: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body *{
+    font-family: 'Roboto', sans-serif;
+}
+.pagina{
+    width: 112.0rem;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5.7rem;
+}
+header img{
+    width: 18.6rem;
+    height: 3.2rem;
+}
+
+.search{
+    display: flex;
+}
+.search input{
+    
+    width: 46.2rem;
+    height: 4.8rem;
+    padding: 1.6rem;
+    align-self: stretch;
+
+    background: #06181c;
+    border-radius: .5px;
+    border: none;
+
+    color: #7C7C8A;
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    border-radius: 1.2rem 0 0 1.2rem;
+
+
+}
+
+
+
+.search button{
+    width: 17rem;
+    height: 4.8rem;
+    display: flex;
+    padding: 1.2rem 3.2rem;
+    align-items: center;
+    gap: .8rem;
+
+    border-radius: .5rem;
+    background: #065E7c;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+
+    cursor: pointer;
+    transition: .2s;
+}
+.search button:hover{
+    transform: scale(1.1);
+}
+.search img{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px solid #4A808C;
+    border-radius: 1.2rem; 
+
+    overflow: hidden;
+}
+
+
+table thead{
+    display: flex;
+    align-items: center;
+    background: #06181c;
+    
+    height: 6.5rem;
+    border-radius: 1.3rem 1.3rem 1.3rem 1.3rem;
+    padding-left: 4.0rem;
+    
+}
+thead tr{
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    
+}
+thead th{
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: #E1E1E6;
+
+    
+}
+.usuario{
+    margin-right: 40rem;
+}
+.user{
+    display: flex;
+    align-items: center;
+    width: 30.4rem;
+    text-align: start;
+    gap: 1.6rem;
+    margin-right: 21rem;
+}
+.followers{
+    padding-left: 4rem;
+}
+
+tbody{
+    display: flex;
+    flex-direction: column;
+    max-height: 60rem;
+    overflow: auto;
+}
+/* essas propriedades fazem que estilazamos a barra de rolagem */
+tbody::-webkit-scrollbar {
+    width: 5px;
+  }
+tbody::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #6e6ea9;
+  }
+tbody::-webkit-scrollbar-track {
+    background: #616060;
+  }
+
+tbody tr{
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    
+    background: rgba(6, 22, 27, 0.50);
+    
+}
+tbody tr:nth-child(even){
+    background: #06181c;
+}
+
+tbody td{
+    text-align: center;
+    
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: #E1E1E6;
+    padding: 1.6rem 2.4rem 1.6rem 4.0rem;
+
+}
+tbody img{
+    width: 6.2 rem;
+    height: 6.2rem;
+    border-radius: 50%;
+
+}
+tbody a{
+    font-size: 2.0rem;
+    font-weight: 700;
+    line-height: 160%;
+    text-decoration: none;
+    color: #E1E1E6;
+}
+.link{
+    font-size: 1.5rem;
+}
+tbody button{
+    color: #F75A68;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+    transition: .2s;
+
+    font-size: 1.6rem;
+}
+tbody button:hover{
+    transform: scale(1.2);
+}
+.nenhum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55rem;
+    gap: 6.0rem;
+    border: 1px solid #4A808C;
+    border-radius: 0 0 1.2rem 1.2rem;
+    border-top: none;
+
+
+}
+.nenhum p{
+    font-size: 4.0rem;
+    font-weight: 700;
+    color: #4E5455;
+}
+.nenhum.light{
+    display: none;
+}
+table.light{
+    border-bottom: none;
+    border-radius: 1.2rem 1.2rem 0 0;
+
+}
+@keyframes move{
+    
+    0%{
+        
+         transform: translateY(var(--startY))  ;
+    }
+    100%{
+        
+    }
+}
+table tbody tr:first-child{
+    --startY: 100%;
+    animation: move 1.2s;
+}
+@media (max-width: 1300px){
+    header img{
+        width: 12.6rem;
+        height: 2.2rem;
+        
+    }
+    .search input{
+    
+        width: 30.2rem;
+        height: 3.8rem;
+
+        font-size: 1.4rem;
+
+    }
+    .search button{
+        width: 10rem;
+        height: 3.8rem;
+        display: flex;
+        padding: .5rem 1.0rem;
+        align-items: center;
+        gap: .8rem;
+    
+        border-radius: 0 1.2rem 1.2rem 0;
+        background: #065E7c;
+    
+        font-size: 1.0rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        border: none;
+    
+        cursor: pointer;
+        transition: .2s;
+    }
+    header{
+        margin-bottom: 3.7rem;
+    }
+    tbody{
+        display: flex;
+        flex-direction: column;
+        max-height: 30rem;
+        overflow: auto;
+    }
+    .nenhum{
+        height: 30rem;
+    }
+    .nenhum p{
+        font-size: 4.0rem;
+        font-weight: 700;
+        color: #4E5455;
+    }
+    
+    
+
+}
+
+
+
+
+
+
